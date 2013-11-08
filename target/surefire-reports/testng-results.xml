@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="276" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="276" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+      <class name="com.springapp.mvc.controller.FourthSentenceControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FourthSentenceControllerTest@4edc35ba]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentence()[pri:0, instance:com.springapp.mvc.controller.FourthSentenceControllerTest@4edc35ba]" name="testAddSentence" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FourthSentenceControllerTest@4edc35ba]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testOnPage()[pri:0, instance:com.springapp.mvc.controller.FourthSentenceControllerTest@4edc35ba]" name="testOnPage" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+      <class name="com.springapp.mvc.controller.SecondSentenceControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.SecondSentenceControllerTest@12efc0ee]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentence()[pri:0, instance:com.springapp.mvc.controller.SecondSentenceControllerTest@12efc0ee]" name="testAddSentence" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.SecondSentenceControllerTest@12efc0ee]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testOnPage()[pri:0, instance:com.springapp.mvc.controller.SecondSentenceControllerTest@12efc0ee]" name="testOnPage" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+      <class name="com.springapp.mvc.service.PoemServiceTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentenceToCurrentPoem()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="testAddSentenceToCurrentPoem" duration-ms="5" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="setUp" is-config="true" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentencesToModel()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="testAddSentencesToModel" duration-ms="2" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="setUp" is-config="true" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testInitTheNewPoem()[pri:0, instance:com.springapp.mvc.service.PoemServiceTest@1f6e3ecd]" name="testInitTheNewPoem" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+      <class name="com.springapp.mvc.controller.ThirdSentenceControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.ThirdSentenceControllerTest@3a6352f8]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentence()[pri:0, instance:com.springapp.mvc.controller.ThirdSentenceControllerTest@3a6352f8]" name="testAddSentence" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.ThirdSentenceControllerTest@3a6352f8]" name="setUp" is-config="true" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testOnPage()[pri:0, instance:com.springapp.mvc.controller.ThirdSentenceControllerTest@3a6352f8]" name="testOnPage" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+      <class name="com.springapp.mvc.controller.FinalPoemControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FinalPoemControllerTest@6483f3a0]" name="setUp" is-config="true" duration-ms="199" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentence()[pri:0, instance:com.springapp.mvc.controller.FinalPoemControllerTest@6483f3a0]" name="testAddSentence" duration-ms="12" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FinalPoemControllerTest@6483f3a0]" name="setUp" is-config="true" duration-ms="2" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testOnPage()[pri:0, instance:com.springapp.mvc.controller.FinalPoemControllerTest@6483f3a0]" name="testOnPage" duration-ms="22" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+      <class name="com.springapp.mvc.controller.FirstSentenceControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FirstSentenceControllerTest@7edd14d9]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddSentence()[pri:0, instance:com.springapp.mvc.controller.FirstSentenceControllerTest@7edd14d9]" name="testAddSentence" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.springapp.mvc.controller.FirstSentenceControllerTest@7edd14d9]" name="setUp" is-config="true" duration-ms="1" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+        <test-method status="PASS" signature="testOnPage()[pri:0, instance:com.springapp.mvc.controller.FirstSentenceControllerTest@7edd14d9]" name="testOnPage" duration-ms="0" started-at="2013-11-08T21:04:34Z" finished-at="2013-11-08T21:04:34Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
