@@ -47,14 +47,15 @@ public class PoemServiceTest {
         poemService.addSentencesToModel(modelMap, mockHttpServletRequest);
         assertThat(modelMap.containsAttribute("sentences")).isEqualTo(true);
         assertThat(modelMap.get("sentences")).isEqualTo(Arrays.asList("1234"));
+        assertThat(modelMap.get("poem")).isNotNull();
+
     }
 
     @Test
     public void testAddSentenceToCurrentPoem() throws Exception {
 
         mockHttpServletRequest = new MockHttpServletRequest();
-        String sentence = new String("second");
-        mockHttpServletRequest.setParameter(sentence, "second_context");
+        String sentence = new String("second_context");
         mockHttpServletRequest.getSession().setAttribute("poem", new Poem(new ArrayList()));
         poemService.addSentenceToCurrentPoem(mockHttpServletRequest,sentence);
 

@@ -4,6 +4,7 @@ import com.springapp.mvc.domain.Poem;
 import com.springapp.mvc.service.PoemService;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -46,7 +47,8 @@ public class ThirdSentenceControllerTest {
 
     @Test
     public void testAddSentence() throws Exception {
-        String modelAndView = controller.addSentence(mockHttpServletRequest);
+        BindingResult result = mock(BindingResult.class);
+        String modelAndView = controller.addSentence(new Poem("third"),result,mockHttpServletRequest);
         assertThat(modelAndView).isEqualTo("redirect:/home/fourth");
     }
 }

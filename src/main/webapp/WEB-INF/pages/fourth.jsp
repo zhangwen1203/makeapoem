@@ -10,10 +10,19 @@
         <p></p>
     </tr>
 </c:forEach>
-    <form name="input" action="/home/fourth" method="post">
-        Fourth line:
-        <input type="text" name="fourth" />
-        <input type="submit" value="Submit" />
-     </form>
+
+<form:form method="POST" commandName="poem" action="/home/fourth">
+    <form:errors path="*" cssClass="errorblock" element="div" />
+    <table>
+        <tr>
+            <td>Fourth Line :</td>
+            <td><form:input path="newSentence" /></td>
+            <td><form:errors path="newSentence" cssClass="error" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="submit" value="next"/></td>
+        </tr>
+    </table>
+</form:form>
 </body>
 </html>

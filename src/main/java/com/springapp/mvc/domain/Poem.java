@@ -1,5 +1,7 @@
 package com.springapp.mvc.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -12,34 +14,32 @@ import java.util.List;
  */
 public class Poem implements Serializable{
 
-    private String title;
     private List<String> sentences;
 
-    public Poem() {
+    @NotEmpty
+    private String newSentence;
+
+    public Poem(String newSentence) {
+        this.newSentence = newSentence;
     }
 
-    public Poem(String title) {
-        this.title = title;
+    public Poem() {
     }
 
     public Poem(List sentences) {
         this.sentences = sentences;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public List<String> getSentences() {
         return sentences;
     }
 
-    public void setSentences(List<String> sentences) {
-        this.sentences = sentences;
+    public String getNewSentence() {
+        return newSentence;
     }
 
+    public void setNewSentence(String newSentence) {
+        this.newSentence = newSentence;
+    }
 }

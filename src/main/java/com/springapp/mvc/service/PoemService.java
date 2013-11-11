@@ -26,11 +26,13 @@ public class PoemService {
     }
     public void addSentencesToModel(ModelMap model,HttpServletRequest request){
         model.addAttribute("sentences", ((Poem)request.getSession().getAttribute("poem")).getSentences());
+        model.addAttribute("poem", new Poem());
+
     }
 
     public void addSentenceToCurrentPoem(HttpServletRequest request,String sentence){
         Poem poem = (Poem)request.getSession().getAttribute("poem");
-        poem.getSentences().add(request.getParameter(sentence));
+        poem.getSentences().add(sentence);
         request.getSession().setAttribute("poem",poem);
     }
 

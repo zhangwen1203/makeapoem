@@ -1,13 +1,16 @@
 package com.springapp.mvc.controller;
 
+import com.springapp.mvc.domain.Poem;
 import com.springapp.mvc.service.PoemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,9 +37,12 @@ public class ThirdSentenceController {
     }
 
     @RequestMapping(value = "/home/third", method = RequestMethod.POST)
-    public String addSentence(HttpServletRequest request) {
+    public String addSentence(@Valid Poem poem, BindingResult result,HttpServletRequest request) {
 
-        poemService.addSentenceToCurrentPoem(request, "third");
+        if (result.hasErrors()) {
+            return "third";
+        }
+        poemService.addSentenceToCurrentPoem(request, poem.getNewSentence());
 
         return "redirect:/home/fourth";
     }
