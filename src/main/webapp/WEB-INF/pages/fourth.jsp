@@ -15,7 +15,7 @@
     <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
         <tr>
-            <td>Fourth Line :</td>
+            <td><span name="sentence">Fourth Line :</span></td>
             <td><form:input path="newSentence" /></td>
             <td><form:errors path="newSentence" cssClass="error" /></td>
         </tr>

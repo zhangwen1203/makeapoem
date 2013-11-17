@@ -1,6 +1,7 @@
 package com.springapp.mvc.service;
 
 import com.springapp.mvc.domain.Poem;
+import org.mockito.Mock;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.ui.ModelMap;
 import org.testng.annotations.BeforeMethod;
@@ -22,11 +23,11 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class PoemServiceTest {
 
     private MockHttpServletRequest mockHttpServletRequest;
+
     private PoemService poemService;
 
     @BeforeMethod
     public void setUp() throws Exception {
-        initMocks(this);
         mockHttpServletRequest = new MockHttpServletRequest();
         poemService = new PoemService();
 
@@ -35,16 +36,24 @@ public class PoemServiceTest {
     @Test
     public void testInitTheNewPoem() throws Exception {
 
+        // when
         poemService.initTheNewPoem(mockHttpServletRequest);
+
+        // then
         assertThat(mockHttpServletRequest.getSession().getAttribute("poem")).isInstanceOf((new Poem()).getClass());
     }
 
     @Test
     public void testAddSentencesToModel() throws Exception {
 
+        // given
         ModelMap  modelMap = new ModelMap();
         mockHttpServletRequest.getSession().setAttribute("poem",(new Poem(Arrays.asList("1234"))));
+
+        // when
         poemService.addSentencesToModel(modelMap, mockHttpServletRequest);
+
+        //then
         assertThat(modelMap.containsAttribute("sentences")).isEqualTo(true);
         assertThat(modelMap.get("sentences")).isEqualTo(Arrays.asList("1234"));
         assertThat(modelMap.get("poem")).isNotNull();

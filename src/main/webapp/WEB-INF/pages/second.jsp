@@ -14,9 +14,17 @@
     <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
         <tr>
-            <td>Second Line :</td>
-            <td><form:input path="newSentence" /></td>
-            <td><form:errors path="newSentence" cssClass="error" /></td>
+            <td>
+                <span name="sentence">
+                    Second Line :
+                </span>
+            </td>
+            <td>
+                <form:input path="newSentence" />
+            </td>
+            <td>
+                <form:errors path="newSentence" cssClass="error" />
+            </td>
         </tr>
         <tr>
             <td colspan="3"><input type="submit" value="next"/></td>

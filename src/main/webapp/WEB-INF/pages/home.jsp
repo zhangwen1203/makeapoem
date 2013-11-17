@@ -3,14 +3,15 @@
 <html>
 
 <body>
+<title>Make A Poem</title>
 <h2>Make A Poem</h2>
 
 <form:form method="POST" commandName="poem" action="/home">
     <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
         <tr>
-            <td>First Line :</td>
-            <td><form:input path="newSentence" /></td>
+            <td><span name="sentence">First Line :</span></td>
+            <td><form:input path="newSentence" name = "newSentence"/></td>
             <td><form:errors path="newSentence" cssClass="error" /></td>
         </tr>
         <tr>
