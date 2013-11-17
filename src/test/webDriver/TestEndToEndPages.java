@@ -24,8 +24,7 @@ public class TestEndToEndPages {
     }
 
     @Test
-    public void shouldBeAbleEnterFirstSentenceAndClickNextToVerifySecondPage()
-    {
+    public void shouldBeAbleEnterFirstSentenceAndClickNextToVerifySecondPage() {
         String headerMessage = "Make A Poem";
         String title = "Make A Poem";
 
@@ -37,34 +36,24 @@ public class TestEndToEndPages {
         verifyAddSentencePage(title, headerMessage, firstSentence, firstSentenceName, secondSentenceName);
 
     }
+
     @Test
-    public void shouldBeAbleToTheEndPage()
-    {
+    public void shouldBeAbleToTheEndPage() {
         String headerMessage = "Make A Poem";
         String title = "Make A Poem";
 
-        String firstSentence = "First";
-        String firstSentenceName = "First Line :";
+        String[] sentences = {"First", "Second", "Third", "Fourth"};
+        String[] sentenceNames =
+                {"First Line :", "Second Line :", "Third Line :", "Fourth Line :", ""};
 
-        String secondSentence = "Second";
-        String secondSentenceName = "Second Line :";
 
-        String thirdSentence = "Third";
-        String thirdSentenceName = "Third Line :";
-
-        String fourthSentence = "Fourth";
-        String fourthSentenceName = "Fourth Line :";
-
-        verifyAddSentencePage(title, headerMessage, firstSentence, firstSentenceName, secondSentenceName);
-        verifyAddSentencePage(title, headerMessage, secondSentence, secondSentenceName, thirdSentenceName);
-        verifyAddSentencePage(title, headerMessage, thirdSentence, thirdSentenceName, fourthSentenceName);
-        verifyAddSentencePage(title, headerMessage, fourthSentence, fourthSentenceName, "");
-
-        String[] sentences = {firstSentence,secondSentence,thirdSentence,fourthSentence};
+        for (int i = 0; i < sentences.length; i++) {
+            verifyAddSentencePage(title, headerMessage, sentences[i], sentenceNames[i], sentenceNames[i + 1]);
+        }
         verifyFinalPage(sentences);
     }
 
-    public void verifyAddSentencePage(String title, String headerMessage,String addSentence, String sentenceName, String nextSentenceName) {
+    public void verifyAddSentencePage(String title, String headerMessage, String addSentence, String sentenceName, String nextSentenceName) {
 
         // verify title of index page
         verifyTitle(title);
@@ -81,11 +70,12 @@ public class TestEndToEndPages {
         if (!nextSentenceName.isEmpty())
             verifySentenceName(nextSentenceName);
     }
+
     public void verifyFinalPage(String[] sentences) {
 
         WebElement element = driver.findElement(By.name("sentences"));
 
-        String actualSentences = (element.getText()).replaceAll("\\n","");
+        String actualSentences = (element.getText()).replaceAll("\\n", "");
 
         String exceptSentences = "";
 
@@ -96,8 +86,8 @@ public class TestEndToEndPages {
         assertThat(actualSentences, equalTo(exceptSentences));
 
 
-
     }
+
     private void verifyTitle(String expectedTitle) {
         //get the title of the page
         String actualTitle = driver.getTitle();
@@ -115,6 +105,7 @@ public class TestEndToEndPages {
         // verify header text
         assertThat(actualHeaderMessage, equalTo(expectedHeaderMessage));
     }
+
     private void verifySentenceName(String SentenceName) {
         // find header element
         WebElement element = driver.findElement(By.name("sentence"));
@@ -124,6 +115,7 @@ public class TestEndToEndPages {
         // verify header text
         assertThat(actualSentenceName, equalTo(SentenceName));
     }
+
     private void enterSentence(String sentence) {
         // find the input text box
         WebElement element = driver.findElement(By.name("newSentence"));
