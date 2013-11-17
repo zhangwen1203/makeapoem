@@ -3,8 +3,8 @@
 <html>
 
 <body>
-<title>Make A Poem</title>
-<h2>Make A Poem</h2>
+
+<h1>Make A Poem</h1>
 
 <form:form method="POST" commandName="poem" action="/home">
     <form:errors path="*" cssClass="errorblock" element="div" />

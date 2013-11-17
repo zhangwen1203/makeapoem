@@ -4,6 +4,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
+    <title>Make A Poem</title>
     <style>
         .error {
             color: #ff0000;
