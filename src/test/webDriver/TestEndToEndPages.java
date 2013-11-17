@@ -26,21 +26,34 @@ public class TestEndToEndPages {
     @Test
     public void shouldBeAbleEnterFirstSentenceAndClickNextToVerifySecondPage()
     {
-        String firstSentence = "Welcome";
+        String headerMessage = "Make A Poem";
+        String title = "Make A Poem";
+
+        String firstSentence = "First";
+        String firstSentenceName = "First Line :";
+
+        String secondSentenceName = "Second Line :";
+
+        verifyAddSentencePage(firstSentence, title, headerMessage, firstSentenceName, secondSentenceName);
+
+    }
+
+    public void verifyAddSentencePage(String addSentence, String title, String headerMessage, String sentenceName, String nextSentenceName) {
+
         // verify title of index page
-        verifyTitle("Make A Poem");
+        verifyTitle(title);
 
         //verify header of index page
-        verifyHeaderMessage("Make A Poem");
+        verifyHeaderMessage(headerMessage);
 
-        verifySentenceName("First Line :");
+        verifySentenceName(sentenceName);
 
         //enter user name as Allen
-        enterSentence(firstSentence);
+        enterSentence(addSentence);
 
         //verify title of welcome page
-        verifySentenceName("Second Line :");
 
+        verifySentenceName(nextSentenceName);
     }
 
     private void verifyTitle(String expectedTitle) {
