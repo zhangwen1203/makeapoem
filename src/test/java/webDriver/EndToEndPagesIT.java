@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class EndToEndPagesTest {
+public class EndToEndPagesIT {
 
     private WebDriver driver;
 
@@ -89,7 +88,6 @@ public class EndToEndPagesTest {
         // verify header text
         assertThat(actualSentences, equalTo(exceptSentences));
 
-
     }
 
     private void verifyTitle(String expectedTitle) {
@@ -129,6 +127,12 @@ public class EndToEndPagesTest {
 
         // submit form
         element.submit();
+    }
+    @AfterMethod
+    public void closeDriver() {
+
+        driver.close();
+
     }
 
 }
