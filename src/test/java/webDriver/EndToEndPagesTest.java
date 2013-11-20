@@ -1,22 +1,24 @@
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
+package webDriver;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-public class TestEndToEndPages {
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
+public class EndToEndPagesTest {
 
     private WebDriver driver;
 
-    @Before
+    @BeforeMethod
     public void setUp() {
         // Create a new instance of the chrome driver
         System.setProperty("webdriver.chrome.driver", "src/test/chromedriver/chromedriver");
-        driver = new ChromeDriver();
+         driver = new ChromeDriver();
 
         //Navigate to desired web page
         driver.get("http://localhost:8080/");
@@ -48,12 +50,14 @@ public class TestEndToEndPages {
 
 
         for (int i = 0; i < sentences.length; i++) {
-            verifyAddSentencePage(title, headerMessage, sentences[i], sentenceNames[i], sentenceNames[i + 1]);
+            verifyAddSentencePage(title, headerMessage, sentences[i],
+                    sentenceNames[i], sentenceNames[i + 1]);
         }
         verifyFinalPage(sentences);
     }
 
-    public void verifyAddSentencePage(String title, String headerMessage, String addSentence, String sentenceName, String nextSentenceName) {
+    public void verifyAddSentencePage(String title, String headerMessage,
+                                      String addSentence, String sentenceName, String nextSentenceName) {
 
         // verify title of index page
         verifyTitle(title);
