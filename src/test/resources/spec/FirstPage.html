@@ -4,13 +4,32 @@
     <link href="concordion.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <p concordion:assertEquals="greeting">Hello World!</p>
+<p concordion:execute="#header = shouldBeAbleToGetTheHeader()"/>
+The header is:
+<span concordion:assertEquals="#header">Make A Poem</span>
+    <div class="example">
+        <div class="example">
+            when user input first sentence
+            <span concordion:set="#firstSentence">firstSentence</span>
+            to the input box
+            <span concordion:set="#firstSentenceName">First Line :</span>
+            <p concordion:execute="#firstResult = shouldBeAbleToTheNextPage(#firstSentenceName)"/>
+            then he can reach next page and display
+            <span concordion:assertEquals="#firstResult">Second Line :</span>
+        </div>
+    </div>
 
-when user input first sentence 'first sentence', then he can reach sencond page,
+    <!--<div class="example">-->
+        <!--when user input sentences-->
+        <!--<p concordion:set="#firstSentence">firstSentence</p>-->
+        <!--<p concordion:set="#secondSentence">secondSentence</p>-->
+        <!--<p concordion:set="#thirdSentence">thirdSentence</p>-->
+        <!--<p concordion:set="#fourthSentence">fourthSentence</p>-->
 
+        <!--The final page will display:-->
+        <!--<p concordion:execute="#sentenses = shouldBeAbleToGetFinalPage(#firstSentence,#secondSentence,#thirdSentence,#fourthSentence)"/>-->
 
-
-on final page, he will see '' displayed.
-
+        <!--<p concordion:assertEquals="#sentenses.get(0)">firstSentence</p>-->
+    <!--</div>-->
 </body>
 </html>

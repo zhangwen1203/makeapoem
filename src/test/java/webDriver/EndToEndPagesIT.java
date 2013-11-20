@@ -8,7 +8,6 @@ import org.testng.annotations.*;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-
 public class EndToEndPagesIT {
 
     private WebDriver driver;
@@ -54,6 +53,23 @@ public class EndToEndPagesIT {
         }
         verifyFinalPage(sentences);
     }
+    @Test
+    public String shouldBeAbleToTheNextPage(String pageName) {
+        String headerMessage = "Make A Poem";
+        String title = "Make A Poem";
+
+        String[] sentences = {"First", "Second", "Third", "Fourth"};
+        String[] sentenceNames =
+                {"First Line :", "Second Line :", "Third Line :", "Fourth Line :", ""};
+
+
+        for (int i = 0; i < sentences.length; i++) {
+            verifyAddSentencePage(title, headerMessage, sentences[i],
+                    sentenceNames[i], sentenceNames[i + 1]);
+        }
+        verifyFinalPage(sentences);
+        return "";
+    }
 
     public void verifyAddSentencePage(String title, String headerMessage,
                                       String addSentence, String sentenceName, String nextSentenceName) {
@@ -90,7 +106,7 @@ public class EndToEndPagesIT {
 
     }
 
-    private void verifyTitle(String expectedTitle) {
+    public void verifyTitle(String expectedTitle) {
         //get the title of the page
         String actualTitle = driver.getTitle();
 
@@ -98,7 +114,7 @@ public class EndToEndPagesIT {
         assertThat(actualTitle, equalTo(expectedTitle));
     }
 
-    private void verifyHeaderMessage(String expectedHeaderMessage) {
+    public void verifyHeaderMessage(String expectedHeaderMessage) {
         // find header element
         WebElement element = driver.findElement(By.tagName("h1"));
 
@@ -108,7 +124,7 @@ public class EndToEndPagesIT {
         assertThat(actualHeaderMessage, equalTo(expectedHeaderMessage));
     }
 
-    private void verifySentenceName(String SentenceName) {
+    public void verifySentenceName(String SentenceName) {
         // find header element
         WebElement element = driver.findElement(By.name("sentence"));
 
@@ -118,7 +134,7 @@ public class EndToEndPagesIT {
         assertThat(actualSentenceName, equalTo(SentenceName));
     }
 
-    private void enterSentence(String sentence) {
+    public void enterSentence(String sentence) {
         // find the input text box
         WebElement element = driver.findElement(By.name("newSentence"));
 
