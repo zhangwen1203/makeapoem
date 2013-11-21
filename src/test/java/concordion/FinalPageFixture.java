@@ -1,4 +1,4 @@
-package webDriver;
+package concordion;
 /**
  * Created with IntelliJ IDEA.
  * User: twer
@@ -13,13 +13,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import webDriver.EndToEndPagesIT;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 @RunWith(ConcordionRunner.class)
-public class FinalPageIT {
+public class FinalPageFixture {
 
     private WebDriver driver;
 
