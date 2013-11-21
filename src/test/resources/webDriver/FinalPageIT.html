@@ -1,0 +1,57 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+
+<head>
+    <link href="concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<p concordion:execute="#header = shouldBeAbleToGetTheHeader()"/>
+The header is:
+<span concordion:assertEquals="#header">Make A Poem</span>
+    <div class="example">
+            when user input first sentence
+            <span concordion:set="#firstSentence">firstSentence</span>
+            to the input box
+            <span concordion:set="#firstSentenceName">First Line :</span>
+            <p concordion:execute="#firstResult = shouldBeAbleToTheNextPage(#firstSentenceName)"/>
+            then he can reach next page and display
+            <span concordion:assertEquals="#firstResult">Second Line :</span>
+    </div>
+    <div class="example">
+            when user input second sentence
+            <span concordion:set="#secondSentence">secondSentence</span>
+            to the input box
+            <span concordion:set="#secondSentenceName">Second Line :</span>
+            <p concordion:execute="#secondResult = shouldBeAbleToTheNextPage(#secondSentenceName)"/>
+            then he can reach next page and display
+            <span concordion:assertEquals="#secondResult">Third Line :</span>
+    </div>
+    <div class="example">
+            when user input third sentence
+            <span concordion:set="#thirdSentence">thirdSentence</span>
+            to the input box
+            <span concordion:set="#thirdSentenceName">Third Line :</span>
+            <p concordion:execute="#thirdResult = shouldBeAbleToTheNextPage(#thirdSentenceName)"/>
+            then he can reach next page and display
+            <span concordion:assertEquals="#thirdResult">Fourth Line :</span>
+    </div>
+    <div class="example">
+            when user input first sentence
+            <span concordion:set="#fourthSentence">fourthSentence</span>
+            to the input box
+            <span concordion:set="#fourthSentenceName">First Line :</span>
+
+    </div>
+    <div class="example">
+
+        The final page will display:
+
+        <table concordion:verifyRows="#sentense : shouldBeAbleToGetFinalPage(#firstSentence,#secondSentence,#thirdSentence,#fourthSentence)">
+            <tr><th concordion:assertEquals="#sentense">Final Page</th></tr>
+            <tr><td>firstSentence</td></tr>
+            <tr><td>secondSentence</td></tr>
+            <tr><td>thirdSentence</td></tr>
+            <tr><td>fourthSentence</td></tr>
+        </table>
+    </div>
+</body>
+</html>

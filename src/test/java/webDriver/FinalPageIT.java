@@ -1,4 +1,4 @@
-package spec;
+package webDriver;
 /**
  * Created with IntelliJ IDEA.
  * User: twer
@@ -19,26 +19,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @RunWith(ConcordionRunner.class)
-public class FirstPageFixture {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
+public class FinalPageIT {
 
     private WebDriver driver;
-    private EndToEndPagesIT endToEndPagesIT;
-
 
     public void setUp() {
         // Create a new instance of the chrome driver
         System.setProperty("webdriver.chrome.driver", "src/test/chromedriver/chromedriver");
         driver = new ChromeDriver();
-        endToEndPagesIT = new EndToEndPagesIT();
         //Navigate to desired web page
         driver.get("http://localhost:8080/");
 
     }
-
 
     public String shouldBeAbleToTheNextPage(String pageName) {
 
@@ -56,6 +48,7 @@ public class FirstPageFixture {
         closeDriver();
         return nextSentenceName;
     }
+
     public String shouldBeAbleToGetTheHeader() {
         setUp();
         WebElement element = driver.findElement(By.tagName("h1"));
@@ -64,30 +57,30 @@ public class FirstPageFixture {
         closeDriver();
         return actualHeaderMessage;
     }
-    public String[] shouldBeAbleToGetFinalPage(String firstSentence,String secondSentence,String thirdSentence,String fourthSentence) {
+
+    public ArrayList<String> shouldBeAbleToGetFinalPage(String firstSentence, String secondSentence, String thirdSentence, String fourthSentence) {
         setUp();
-        String nextSentenceName = "";
+
         String[] sentences = {firstSentence, secondSentence, thirdSentence, fourthSentence};
         ArrayList<String> sentenceNames = new ArrayList<String>();
         sentenceNames.addAll(Arrays.asList("First Line :", "Second Line :", "Third Line :", "Fourth Line :", ""));
 
         for (int i = 0; i < sentences.length; i++) {
-            nextSentenceName = verifyGetNextPage(sentenceNames.get(i), sentences[i]);
+            verifyGetNextPage(sentenceNames.get(i), sentences[i]);
         }
-        System.out.println(nextSentenceName);
 
         WebElement element = driver.findElement(By.name("sentences"));
 
-        String actualSentences = (element.getText()).replaceAll("\\n", "");
         String[] sentenceString = (element.getText()).split("\\n");
-
-        for (int j = 0;j<sentenceString.length;j++){
-             System.out.println(sentenceString[j]);
+        ArrayList<String> list = new ArrayList<String>();
+        for (int j = 0; j < sentenceString.length; j++) {
+            list.add(sentenceString[j]);
         }
 
         closeDriver();
-        return sentenceString;
+        return list;
     }
+
     public String verifyGetNextPage(String sentenceName, String sentence) {
 
         WebElement element = driver.findElement(By.name("newSentence"));
@@ -96,11 +89,15 @@ public class FirstPageFixture {
         element.sendKeys(sentence);
         element.submit();
 
-        WebElement element1 = driver.findElement(By.name("sentence"));
-
-        return element1.getText();
+        String nextPage = "";
+        if (!sentenceName.equals("Fourth Line :")) {
+            WebElement element1 = driver.findElement(By.name("sentence"));
+            nextPage = element1.getText();
+        }
+        return nextPage;
 
     }
+
     public void closeDriver() {
 
         driver.close();
