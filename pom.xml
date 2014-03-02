@@ -124,6 +124,21 @@
             <artifactId>maven-failsafe-plugin</artifactId>
             <version>2.16</version>
         </dependency>
+        <dependency>
+            <groupId>com.mycila</groupId>
+            <artifactId>mycila-xmltool</artifactId>
+            <version>4.2.ga</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId> org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.5</version>
+        </dependency>
 
     </dependencies>
 
