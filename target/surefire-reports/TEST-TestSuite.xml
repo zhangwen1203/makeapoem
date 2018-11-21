@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.623" errors="0" skipped="0" tests="13" name="TestSuite">
+<testsuite tests="39" failures="12" name="TestSuite" time="0.661" errors="0" skipped="27">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="24.45-b08"/>
-    <property name="user.country.format" value="CN"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.192-b12"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/wzhang/my_files/projects/makeapoem"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="US"/>
+    <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem"/>
-    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="user.dir" value="/Users/wzhang/my_files/projects/makeapoem"/>
+    <property name="java.runtime.version" value="1.8.0_192-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="basedir" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/surefire/surefirebooter1505640761827189111.jar"/>
-    <property name="java.io.tmpdir" value="/var/folders/gv/m43y5g9x1xdc9f2kc2p0kpz00000gn/T/"/>
+    <property name="java.io.tmpdir" value="/var/folders/fl/pgpf1_314y72c2m1hf9qcwt40000gy/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.0/libexec/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/twer/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="surefire.test.class.path" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/test-classes:/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/classes:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.0.RELEASE/spring-context-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.0.RELEASE/spring-aop-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.0.RELEASE/spring-beans-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.0.RELEASE/spring-webmvc-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.0.RELEASE/spring-expression-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-test/3.2.0.RELEASE/spring-test-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/twer/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/testng/testng/6.3.1/testng-6.3.1.jar:/Users/twer/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar:/Users/twer/.m2/repository/com/beust/jcommander/1.12/jcommander-1.12.jar:/Users/twer/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar:/Users/twer/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/Users/twer/.m2/repository/org/easytesting/fest-assert-core/2.0M8/fest-assert-core-2.0M8.jar:/Users/twer/.m2/repository/org/easytesting/fest-util/1.2.3/fest-util-1.2.3.jar:"/>
+    <property name="java.library.path" value="/Users/wzhang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.0/libexec/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.8.5"/>
+    <property name="os.version" value="10.14.1"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.0/libexec/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/twer"/>
-    <property name="user.timezone" value="Asia/Harbin"/>
+    <property name="user.home" value="/Users/wzhang"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
-    <property name="file.encoding" value="US-ASCII"/>
-    <property name="user.name" value="twer"/>
-    <property name="java.class.path" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/test-classes:/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/classes:/Users/twer/.m2/repository/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/twer/.m2/repository/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-context/3.2.0.RELEASE/spring-context-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-aop/3.2.0.RELEASE/spring-aop-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/twer/.m2/repository/org/springframework/spring-beans/3.2.0.RELEASE/spring-beans-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/twer/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/twer/.m2/repository/org/springframework/spring-webmvc/3.2.0.RELEASE/spring-webmvc-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-expression/3.2.0.RELEASE/spring-expression-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/org/springframework/spring-test/3.2.0.RELEASE/spring-test-3.2.0.RELEASE.jar:/Users/twer/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/twer/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/twer/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/twer/.m2/repository/org/testng/testng/6.3.1/testng-6.3.1.jar:/Users/twer/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar:/Users/twer/.m2/repository/com/beust/jcommander/1.12/jcommander-1.12.jar:/Users/twer/.m2/repository/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar:/Users/twer/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar:/Users/twer/.m2/repository/org/easytesting/fest-assert-core/2.0M8/fest-assert-core-2.0M8.jar:/Users/twer/.m2/repository/org/easytesting/fest-util/1.2.3/fest-util-1.2.3.jar:"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="wzhang"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.0/libexec/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="/Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/surefire/surefirebooter1505640761827189111.jar /Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/surefire/surefire5697760994750764412tmp /Users/twer/Desktop/my files/java/sprProjects/makeapoem/target/surefire/surefire605492452278480405tmp"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_45"/>
-    <property name="java.ext.dirs" value="/Users/twer/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="1.8.0_192"/>
+    <property name="java.ext.dirs" value="/Users/wzhang/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="localRepository" value="/Users/twer/.m2/repository"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.0/libexec"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -63,17 +64,219 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.013" classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="testAddSentence"/>
-  <testcase time="0.022" classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="testOnPage"/>
-  <testcase time="0.001" classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="testAddSentence"/>
-  <testcase time="0" classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="testOnPage"/>
-  <testcase time="0" classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="testAddSentence"/>
-  <testcase time="0" classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="testOnPage"/>
-  <testcase time="0.005" classname="com.springapp.mvc.service.PoemServiceTest" name="testAddSentenceToCurrentPoem"/>
-  <testcase time="0.001" classname="com.springapp.mvc.service.PoemServiceTest" name="testAddSentencesToModel"/>
-  <testcase time="0.001" classname="com.springapp.mvc.service.PoemServiceTest" name="testInitTheNewPoem"/>
-  <testcase time="0.001" classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="testAddSentence"/>
-  <testcase time="0.001" classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="testOnPage"/>
-  <testcase time="0" classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="testAddSentence"/>
-  <testcase time="0" classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="testOnPage"/>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="setUp" time="0.319">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FinalPoemControllerTest.setUp(FinalPoemControllerTest.java:32)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNGMapConfigurator@6979e8cb
+</system-out>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="setUp" time="0.32">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FinalPoemControllerTest.setUp(FinalPoemControllerTest.java:32)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="testAddSentence" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FinalPoemControllerTest" name="testOnPage" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FirstSentenceControllerTest.setUp(FirstSentenceControllerTest.java:34)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FirstSentenceControllerTest.setUp(FirstSentenceControllerTest.java:34)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="testAddSentence" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FirstSentenceControllerTest" name="testOnPage" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FourthSentenceControllerTest.setUp(FourthSentenceControllerTest.java:33)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.FourthSentenceControllerTest.setUp(FourthSentenceControllerTest.java:33)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="testAddSentence" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.FourthSentenceControllerTest" name="testOnPage" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0.001">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.service.PoemServiceTest.setUp(PoemServiceTest.java:31)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0.001">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.service.PoemServiceTest.setUp(PoemServiceTest.java:31)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="testAddSentenceToCurrentPoem" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="testAddSentencesToModel" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.service.PoemServiceTest" name="testInitTheNewPoem" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="setUp" time="0.001">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.SecondSentenceControllerTest.setUp(SecondSentenceControllerTest.java:35)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.SecondSentenceControllerTest.setUp(SecondSentenceControllerTest.java:35)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="testAddSentence" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.SecondSentenceControllerTest" name="testOnPage" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.ThirdSentenceControllerTest.setUp(ThirdSentenceControllerTest.java:33)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="setUp" time="0.002">
+    <failure message="javax/servlet/AsyncContext" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/servlet/AsyncContext
+	at com.springapp.mvc.controller.ThirdSentenceControllerTest.setUp(ThirdSentenceControllerTest.java:33)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.AsyncContext
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 37 more
+</failure>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="testAddSentence" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.springapp.mvc.controller.ThirdSentenceControllerTest" name="testOnPage" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>

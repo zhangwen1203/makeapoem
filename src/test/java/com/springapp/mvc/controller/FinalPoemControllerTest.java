@@ -2,10 +2,10 @@ package com.springapp.mvc.controller;
 
 import com.springapp.mvc.domain.Poem;
 import com.springapp.mvc.service.PoemService;
+import org.junit.Before;
+import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.ui.ModelMap;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -24,7 +24,7 @@ public class FinalPoemControllerTest {
     private MockHttpServletRequest mockHttpServletRequest;
     private ModelMap modelMap;
 
-    @BeforeMethod
+    @Before
     public void setUp() throws Exception {
         initMocks(this);
         poemService = mock(PoemService.class);
